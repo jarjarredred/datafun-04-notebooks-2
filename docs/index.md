@@ -3,6 +3,36 @@
 This site provides documentation for this project.
 Use the navigation to explore module-specific materials.
 
+## Custom Project: Penguin EDA Architecture
+### Name:
+**Jarred Gastreich**
+### Dataset
+* **Source**: Seaborn's native data repository (`sns.load_dataset("penguins")`).
+* **Scope**: 344 baseline observations across 8 categories, capturing biological measurements and localized tracking data for three distinct penguin species (*Adelie*, *Chinstrap*, and *Gentoo*) across the Palmer Archipelago islands (Biscoe, Dream, and Torgersen).
+
+### Signals
+* **Target/Grouping Vector (`GROUP_COL`)**: `species` (Categorical variable used to isolate, anchor, and segment structural distributions).
+* **Selected Continuous Analytics Features (`SELECTED_NUMERIC_COLS`)**:
+    * `bill_length_mm` (Continuous numeric signal capturing culinary/foraging adaptation).
+    * `bill_depth_mm` (Continuous numeric signal capturing vertical bill profile).
+    * `flipper_length_mm` (Continuous numeric signal strongly correlated with overall skeletal scale).
+    * `body_mass_g` (Continuous numeric mass metric indicating volumetric size).
+* **Engineered/Cleaned Signal**: `df_clean` (A filtered subset built via non-destructive rows drop down targeting records missing key numeric or categorical vectors, preserving mathematical validity for downstream matrix operations).
+
+### Experiments
+* **Experiment 1: Logger Pipeline Routing**: Modified Section 8 to output visualizations into the artifacts folder automatically to prevent user error where they may not remember to save files.
+* **Experiment 2: Visual Aesthetic & Grid Overlays**: Upgraded Section 8 (`make_plots`) by shifting from default plot baselines to a global `whitegrid` aesthetic. Applied point alpha-blending (`alpha=0.7`) to mitigate scatter plot over-plotting. Superimposed a horizontal jitter `stripplot` directly over a transparent (`alpha=0.6`) `boxplot` canvas to track exact data point frequency alongside quartile distributions.
+
+
+### Results
+* **Visualization Fidelity**: The cross-palette alignment (`Dark2` and `Pastel2`) created a clean, intuitive visual relationship across plots. The strip-on-box overlay successfully unmasked the raw underlying sample size distributions without distorting the interquartile ranges ($25\%$, $50\%$, $75\%$).
+* **I/O Execution**: The script safely targets and generates directory nodes automatically, successfully serializing ultra-crisp `.png` visual assets with zero label/title clipping due to the hard `bbox_inches="tight"` constraints.
+
+### Interpretation
+* **Core Feature Affinity**: The correlation heatmap demonstrates an incredibly tight linear affinity between `flipper_length_mm` and `body_mass_g` (~$0.87$). From a data analytics standpoint, this implies that flipper length acts as an elite proxy metric for body mass, making it an ideal primary independent variable ($X$) if we proceed with modeling a predictive linear regression engine.
+* **Cluster Distinctiveness**: The scatter layout proves that while *Adelie* and *Chinstrap* penguins share overlapping structural space regarding flipper size, they are heavily segmented by bill length. Conversely, *Gentoo* penguins form a distinct, highly isolated cluster characterized by massive skeletal sizing (flipper lengths tracking predominantly above $210\text{ mm}$), revealing high evolutionary divergence.
+* **Business/System Intelligence**: Structuring the code into decoupled loading, checking, cleaning, and visualization modules establishes a clean template model. The automated serialization layer means this script can seamlessly run headless on a remote server or within an automated orchestration workflow, throwing production-ready visual intelligence artifacts right into your project portfolio directories on execution.
+
 ## How-To Guide
 
 Many instructions are common to all our projects.
