@@ -6,6 +6,10 @@
 ### Updates
 #### Small modification
 Updated source file so that the figures save automatically to the artifacts folder.
+
+#### Larger change
+Created Boxplot overlay to include sample size and add jitter so viewers can immediately tell exactly how many penguins are in each category and where the density clusters are. Modified pallette coordination to have a dark scheme and green associates with the Gentoo species and carries over to the box plot.
+
 [![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
