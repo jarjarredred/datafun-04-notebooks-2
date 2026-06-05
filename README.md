@@ -1,5 +1,11 @@
 # datafun-04-notebooks
 
+## Module 4 - Streaming Data Visualizations
+### by Jarred Gastreich, June 2026
+
+### Updates
+#### Small modification
+Updated source file so that the figures save automatically to the artifacts folder.
 [![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
